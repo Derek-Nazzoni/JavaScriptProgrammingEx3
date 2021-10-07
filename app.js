@@ -30,3 +30,16 @@ console.log(`${now.toDateString()} ${now.toTimeString()}`);
 
 console.log('__________________');
 console.log('EXERCISE 3');
+
+let birthDate = new Date(1989, 10, 13);
+console.log(birthDate);
+console.log("What is the date 1 billion seconds from my birthday and how old am I or will be that year.");
+let seconds = 1000000000;
+let days = (seconds / 86400);
+let nextDate = birthDate.getDate() + days;
+let newDate = new Date(birthDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+newDate.setDate(nextDate);
+console.log(newDate);
+let age = newDate.getFullYear() - birthDate.getFullYear();
+console.log(`My age of year ${newDate.getFullYear()} is or will be ${age} `);
+
